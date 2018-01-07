@@ -1,5 +1,23 @@
+<!-- <div className='feature-video-container'>
+        <iframe
+          src={ youtubeEmbedUrl(feature.youtubeId, { noInfo: true }) }
+          frameBorder="0"
+          gesture="media"
+          allow="encrypted-media"
+          title={ feature.title }
+          allowFullScreen></iframe>
+      </div> -->
 <main>
   <app-header></app-header>
+  <div class="feature-video-container" *ngIf="feature">
+    <iframe
+      [src]="featureEmbedUrl"
+      [title]="feature.title"
+      frameborder=0
+      gesture="media"
+      allow="encrypted-media"
+      allowfullscreen></iframe>
+  </div>
   <app-exhibit-collection></app-exhibit-collection>
   <app-back-to-top></app-back-to-top>
   <app-social></app-social>
