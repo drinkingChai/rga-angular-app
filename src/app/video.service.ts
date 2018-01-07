@@ -26,7 +26,7 @@ export class VideoService {
 
   getThumbnailUrl(youtubeId: string): string {
     // returns the first thumbnail url
-    return `https://img.youtube.com/vi/${youtubeId}/0.jpg`
+    return `https://img.youtube.com/vi/${youtubeId}/0.jpg`;
   }
 
   getEmbedUrl(youtubeId: string, options = {}): string {
@@ -35,10 +35,10 @@ export class VideoService {
       noControls: 'controls=0&amp',
       noInfo: 'showinfo=0',
       autoplay: 'autoplay=1'
-    }
+    };
 
-    let optStr = Object.keys(options).map(opt => opts[opt]).join(';')
-    return `https://www.youtube.com/embed/${youtubeId}?${optStr}` 
+    let optStr = Object.keys(options).map(opt => opts[opt]).join(';');
+    return `https://www.youtube.com/embed/${youtubeId}?${optStr}`;
   }
 
   private videosUrl = 'api/videos';
