@@ -9,13 +9,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SocialComponent } from './social/social.component';
 import { BackToTopComponent } from './back-to-top/back-to-top.component';
-import { ModalComponent } from './modal/modal.component';
 import { ModalService } from './modal.service';
 import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { ExhibitCollectionComponent } from './exhibit-collection/exhibit-collection.component';
 import { VideoService } from './video.service';
 import { InMemoryDataService } from './in-memory-data.service';
+import { VideoModalComponent } from './video-modal/video-modal.component';
 
 
 @NgModule({
@@ -25,10 +25,10 @@ import { InMemoryDataService } from './in-memory-data.service';
     FooterComponent,
     SocialComponent,
     BackToTopComponent,
-    ModalComponent,
     NavComponent,
     MainComponent,
-    ExhibitCollectionComponent
+    ExhibitCollectionComponent,
+    VideoModalComponent
   ],
   imports: [
     BrowserModule,

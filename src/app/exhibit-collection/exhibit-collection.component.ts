@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Video } from '../video';
 import { VideoService } from '../video.service';
+import { ModalService } from '../modal.service';
 
 @Component({
   selector: 'app-exhibit-collection',
@@ -11,15 +12,17 @@ export class ExhibitCollectionComponent implements OnInit {
   videos: Video[];
 
   constructor(
-    private videoService: VideoService
+    private videoService: VideoService,
+    public modalService: ModalService
   ) { }
 
   ngOnInit() {
-    this.getVideos()
+    this.getVideos();
   }
 
   getVideos(): void {
     this.videoService.getVideos()
-      .subscribe(videos => this.videos = videos)
+      .subscribe(videos => this.videos = videos);
   }
+
 }

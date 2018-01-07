@@ -1,0 +1,11 @@
+<div class="video-modal" *ngIf="modalService.state" (click)="modalService.hideModal()">
+  <a class='close' (click)="modalService.hideModal()"><i class="far fa-times-circle"></i></a>
+  <div class='loading'></div>
+  <iframe
+    [src]="modalService.embedUrl"
+    title="modal"
+    frameborder=0
+    gesture="media"
+    allow="encrypted-media"
+    allowfullscreen></iframe>
+</div>
