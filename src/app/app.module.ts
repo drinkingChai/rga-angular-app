@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
 import { AppComponent } from './app.component';
@@ -12,8 +14,8 @@ import { ModalService } from './modal.service';
 import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { ExhibitCollectionComponent } from './exhibit-collection/exhibit-collection.component';
-import { ExhibitComponent } from './exhibit/exhibit.component';
-import { ExhibitService } from './exhibit.service';
+import { VideoService } from './video.service';
+import { InMemoryDataService } from './in-memory-data.service';
 
 
 @NgModule({
@@ -26,13 +28,16 @@ import { ExhibitService } from './exhibit.service';
     ModalComponent,
     NavComponent,
     MainComponent,
-    ExhibitCollectionComponent,
-    ExhibitComponent
+    ExhibitCollectionComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [ModalService, ExhibitService],
+  providers: [ModalService, VideoService, InMemoryDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

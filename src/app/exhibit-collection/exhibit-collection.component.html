@@ -1,3 +1,29 @@
-<p>
-  exhibit-collection works!
-</p>
+<!-- <div className='Exhibit' onClick={ onClick }>
+      <div className='image' style={{ backgroundImage: `url(${youtubeThumbnail(video.youtubeId)})` }}></div>
+      <div className='overlay'></div>
+
+      <div className='info'>
+        <h4>{ video.title }</h4>
+        <a>Explore <i className="fas fa-arrow-circle-right"></i></a> { /* replace arrows */ }      
+      </div>
+    </div> -->
+
+    <!-- <div className='ExhibitCollection'>
+    { collection.map((video, i) =>
+      <Exhibit
+        video={ video }
+        key={ i }
+        onClick={ () => toggle(video.youtubeId) } />) } 
+    </div>  -->
+
+<div class="exhibit-collection">
+  <div class="exhibit" *ngFor="let video of videos">
+    <div class="image" [ngStyle]="{ 'background-image': 'url(' + videoService.getThumbnailUrl(video.youtubeId) + ')' }"></div>
+    <div class="overlay"></div>
+
+    <div class="info">
+      <h4>{{ video.title }}</h4>
+      <a>Explore <i class="fas fa-arrow-circle-right"></i></a> 
+    </div>
+  </div>
+</div>
