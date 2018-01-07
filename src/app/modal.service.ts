@@ -9,7 +9,7 @@ export class ModalService {
 
   showModal(youtubeId: string): void {
     this.state = true;
-    this.embedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoService.getEmbedUrl(youtubeId, { noInfo: true }));
+    this.embedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoService.getEmbedUrl(youtubeId, { noInfo: true, autoplay: true }));
     document.querySelector('body').classList.add('modal-open');
   }
 
