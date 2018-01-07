@@ -1,3 +1,11 @@
-<p>
-  header works!
-</p>
+<header>
+  <div class="rotated-text">
+    <div class="inner">
+      <h3 *ngFor="let item of subtitle" class="rotate-{{ item.i }}deg">{{ item.char }}</h3>
+    </div>
+  </div>
+
+  <h1>{{ title }}</h1>
+  <p *ngFor="let para of paragraphs" class="large">{{ para }}</p>
+  <p class="small">{{ paragraphs.join('') }}</p>
+</header>
