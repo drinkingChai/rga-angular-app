@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./back-to-top.component.scss']
 })
 export class BackToTopComponent implements OnInit {
+  scrollTop() {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 
   constructor() { }
 
