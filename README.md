@@ -3,9 +3,10 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
 ## To run
-1. Please run `npm install`
-2. Run `ng serve --open`
-3. If it doesn't open a browser automatically:
+1. Clone or download the repo.
+2. Run `npm install`
+3. Run `ng serve --open`
+4. If it doesn't open a browser automatically:
     1. Open a browser window:
     2. Navigate to [http://localhost:4200](http://localhost:4200)
 
