@@ -5,8 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## To run
 1. Please run `npm install`
 2. Run `ng serve --open`
-3. If it doesn't open a browser automaticall:
-    1. open a browser window:
+3. If it doesn't open a browser automatically:
+    1. Open a browser window:
     2. Navigate to [http://localhost:4200](http://localhost:4200)
 
 ## Notes
