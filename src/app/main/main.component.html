@@ -1,5 +1,6 @@
 <main>
   <app-header></app-header>
+
   <div class="feature-video-container" *ngIf="feature">
     <iframe
       [src]="featureEmbedUrl"
@@ -9,6 +10,9 @@
       allow="encrypted-media"
       allowfullscreen></iframe>
   </div>
+
+  <h4 class='subheader'>Look what we found...</h4>
+
   <app-exhibit-collection></app-exhibit-collection>
   <app-back-to-top></app-back-to-top>
   <app-social></app-social>
